@@ -11,7 +11,7 @@ public class Main {
 	
 	//Welcome message
 public static void main(String[] args) throws SQLException {
-	System.out.println("HELLO. WElCOME TO Salas Tequila !!");
+	System.out.println("HELLO!!! WElCOME TO Salas Tequila.");
 	System.out.println("PLease Select one of the following.");
 	
 //Set variable for user choice
@@ -25,7 +25,7 @@ do{
 	System.out.println("1. Enter 1 to View All Of Current Inventory.");
 	System.out.println("2. Enter 2 to Add New Item(s) To Inventory");
 	System.out.println("3. Enter 3 to Update What Is In Stock.");
-	System.out.println("4. Enter 4 to Generate A Report.");
+	System.out.println("4. Enter 4 to Generate A Report for Current Inventory Total Cash Value.");
 	System.out.println("5. Enter 5 to Search For A Specific Item.");
 	System.out.println("6. Enter 6 to Contact Customer Support.");
 	System.out.println("7. Quit.");
@@ -49,13 +49,15 @@ do{
 		
 	case 3:
 		System.out.println("Updating….");
-		Inventory u = new Inventory();
-		u.update();
+		Inventory U = new Inventory();
+		U.update();
 		break;
 		
 		
 	case 4:
-		System.out.println("Generating….");
+
+		Inventory g = new Inventory();
+		g.totalReport();
 		break;
 		
 	case 5:
@@ -69,6 +71,9 @@ do{
 		
 	case 6:
 		System.out.println("Customer Service");
+		Inventory c = new Inventory();
+		c.customerService();
+		
 		break;
 	case 7:
 		System.out.println("Good Bye!!");
